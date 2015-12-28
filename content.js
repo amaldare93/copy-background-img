@@ -4,3 +4,4 @@ $("body").on("click", function(event){
     console.log(url.slice(5,-2));
   }
 });
+console.log('hello');
