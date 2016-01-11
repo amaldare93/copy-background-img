@@ -9,7 +9,8 @@
 
   "permissions": [
     "clipboardWrite",
-    "contextMenus"
+    "contextMenus",
+    "tabs"
   ],
 
   "background": {
@@ -18,6 +19,13 @@
       "background.js"
     ]
   },
+
+  "content_scripts": [
+    {
+     "js": [ "content.js" ],
+     "matches": [ "<all_urls>" ]
+    }
+  ],
 
   "manifest_version": 2
 }

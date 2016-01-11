@@ -1,11 +1,8 @@
 function onClickHandler(info, tab){
-
-  console.log(info);
-  //
-  // var url = $(event.target).css('background-image');
-  // if (url != 'none') {
-  //   console.log(url.slice(5,-2));
-  // }
+  console.log(tab.id);
+  chrome.tabs.sendMessage(tab.id, {greeting: 'hello'}, function(response) {
+    console.log(response);
+  });
 }
 
 // attach function to menu button
