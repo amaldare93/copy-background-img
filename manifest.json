@@ -1,29 +1,23 @@
 {
-  "manifest_version": 2,
   "name": "Copy Background Image",
   "version": "0.0.0",
 
   "description": "An extension to copy background images to the clipboard.",
+
   "icons": {
   },
 
-  "permissions": ["clipboardWrite", "contextMenus"],
+  "permissions": [
+    "clipboardWrite",
+    "contextMenus"
+  ],
 
   "background": {
-    
+    "persistent": false,
     "scripts": [
       "background.js"
     ]
   },
 
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": [
-        "jquery-2.1.4.min.js",
-        "content.js"
-      ]
-    }
-  ]
-
+  "manifest_version": 2
 }
