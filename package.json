@@ -1,0 +1,23 @@
+{
+  "name": "copy-background-img",
+  "version": "1.0.0",
+  "description": "A small Chrome extension to copy a background image to the clipboard",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amaldare93/copy-background-img.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amaldare93/copy-background-img/issues"
+  },
+  "homepage": "https://github.com/amaldare93/copy-background-img#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.1.1"
+  }
+}

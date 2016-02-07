@@ -1,0 +1,31 @@
+{
+  "name": "Copy Background Image",
+  "version": "0.0.0",
+
+  "description": "An extension to copy background images to the clipboard.",
+
+  "icons": {
+  },
+
+  "permissions": [
+    "clipboardWrite",
+    "contextMenus",
+    "tabs"
+  ],
+
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "background.js"
+    ]
+  },
+
+  "content_scripts": [
+    {
+     "js": [ "content.js" ],
+     "matches": [ "<all_urls>" ]
+    }
+  ],
+
+  "manifest_version": 2
+}
