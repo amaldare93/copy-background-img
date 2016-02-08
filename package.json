@@ -33,7 +33,7 @@
       "webextensions": true
     },
   	"globals": {
-  		"$": false
+  		"Bliss": false
   	},
     "extends": "eslint:recommended"
   }
