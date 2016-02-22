@@ -43,4 +43,30 @@ var copyBackgroundImage = (function() {
     document.execCommand('Copy');
     document.body.removeChild(input);
   };
+
+  function copyImageToClipboard(url) {
+    console.log("alpha1");
+    var img = document.createElement('img');
+    img.style.position = 'fixed';
+    img.style.opacity = 0;
+    img.src = url;
+    document.body.appendChild(img);
+
+    var range = document.createRange();
+    range.setStartBefore(img);
+    range.setEndAfter(img);
+    range.selectNode(img);
+    window.getSelection().addRange(range);
+
+    try {
+      // Now that we've selected the anchor text, execute the copy command
+      var successful = document.execCommand('copy');
+      var msg = successful ? 'successful' : 'unsuccessful';
+      console.log('Copy command was ' + msg);
+    } catch(err) {
+      console.log('Oops, unable to copy');
+    }
+    window.getSelection().removeAllRanges();
+    document.body.removeChild(img);
+  };
 }());
