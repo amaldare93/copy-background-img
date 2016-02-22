@@ -44,6 +44,8 @@ var copyBackgroundImage = (function() {
     document.body.removeChild(input);
   };
 
+
+  // Attempt to copy background image AS an image (not url)
   function copyImageToClipboard(url) {
     console.log("alpha1");
     var img = document.createElement('img');
