@@ -16,7 +16,7 @@
   // tell it to do something
   function onClickHandler(info, tab){
     chrome.tabs.sendMessage(tab.id, {greeting: 'hello'}, function(response) {
-
+      chrome.tabs.create({ url: response.backgroundImageURL });
     });
   }
 

@@ -16,7 +16,7 @@ var copyBackgroundImage = (function() {
     console.log(backgroundImageURL);
   }, false);
 
-  // When a user clicks the "Get Backgoung Image" context menu button
+  // When a user clicks the "Get Background Image" context menu button
   chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse){
 
